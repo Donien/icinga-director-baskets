@@ -1,0 +1,430 @@
+{
+    "DataList": {
+        "operating_systems": {
+            "entries": [
+                {
+                    "entry_name": "bsd",
+                    "entry_value": "BSD",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "linux",
+                    "entry_value": "Linux",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "windows",
+                    "entry_value": "Windows",
+                    "format": "string",
+                    "allowed_roles": null
+                }
+            ],
+            "list_name": "operating_systems",
+            "owner": "admin"
+        },
+        "linux_distributions": {
+            "entries": [
+                {
+                    "entry_name": "debian",
+                    "entry_value": "Debian",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "ubuntu",
+                    "entry_value": "Ubuntu",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "centos",
+                    "entry_value": "CentOS",
+                    "format": "string",
+                    "allowed_roles": null
+                }
+            ],
+            "list_name": "linux_distributions",
+            "owner": "admin"
+        },
+        "debian_versions": {
+            "entries": [
+                {
+                    "entry_name": "2.0",
+                    "entry_value": "2.0 - Hamm",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "2.1",
+                    "entry_value": "2.1 - Slink",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "2.2",
+                    "entry_value": "2.2 - Potato",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "3.0",
+                    "entry_value": "3.0 - Woody",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "3.1",
+                    "entry_value": "3.1 - Sarge",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "4.0",
+                    "entry_value": "4.0 - Etch",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "5.0",
+                    "entry_value": "5.0 - Lenny",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "6.0",
+                    "entry_value": "6.0 - Squeeze",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "7",
+                    "entry_value": "7 - Wheezy",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "8",
+                    "entry_value": "8 - Jessie",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "9",
+                    "entry_value": "9 - Stretch",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "10",
+                    "entry_value": "10 - Buster",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "11",
+                    "entry_value": "11 - Bullseye",
+                    "format": "string",
+                    "allowed_roles": null
+                }
+            ],
+            "list_name": "debian_versions",
+            "owner": "admin"
+        },
+        "ubuntu_versions": {
+            "entries": [
+                {
+                    "entry_name": "4.10",
+                    "entry_value": "4.10 - Warty Warthog",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "5.04",
+                    "entry_value": "5.04 - Hoary Hedgehog",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "5.10",
+                    "entry_value": "5.10 - Breezy Badger",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "6.06",
+                    "entry_value": "6.06 - Dapper Drake (LTS)",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "6.10",
+                    "entry_value": "6.10 - Edgy Eft",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "7.04",
+                    "entry_value": "7.04 - Feisty Fawn",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "7.10",
+                    "entry_value": "7.10 - Gutsy Gibbon",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "8.04",
+                    "entry_value": "8.04 - Hardy Heron (LTS)",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "8.10",
+                    "entry_value": "8.10 - Intrepid Ibex",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "9.04",
+                    "entry_value": "9.04 - Jaunty Jackalope",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "9.10",
+                    "entry_value": "9.10 - Karmic Koala",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "10.04",
+                    "entry_value": "10.04 - Lucid Lynx (LTS)",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "10.10",
+                    "entry_value": "10.10 - Maverick Meerkat",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "11.04",
+                    "entry_value": "11.04 - Natty Narwhal",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "11.10",
+                    "entry_value": "11.10 - Oneiric Ocelot",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "12.04",
+                    "entry_value": "12.04 - Precise Pangolin (LTS)",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "12.10",
+                    "entry_value": "12.10 - Quantal Quetzal",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "13.04",
+                    "entry_value": "13.04 - Raring Ringtail",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "13.10",
+                    "entry_value": "13.10 - Saucy Salamander",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "14.04",
+                    "entry_value": "14.04 - Trusty Tahr (LTS)",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "14.10",
+                    "entry_value": "14.10 - Utopic Unicorn",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "15.04",
+                    "entry_value": "15.04 - Vivid Vervet",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "15.10",
+                    "entry_value": "15.10 - Wily Werewolf",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "16.04",
+                    "entry_value": "16.04 - Xenial Xerus (LTS)",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "16.10",
+                    "entry_value": "16.10 - Yakkety Yak",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "17.04",
+                    "entry_value": "17.04 - Zesty Zapus",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "17.10",
+                    "entry_value": "17.10 - Artful Aardvark",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "18.04",
+                    "entry_value": "18.04 - Bionic Beaver (LTS)",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "18.10",
+                    "entry_value": "18.10 - Cosmic Cuttlefish",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "19.04",
+                    "entry_value": "19.04 - Disco Dingo",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "19.10",
+                    "entry_value": "19.10 - Eoan Ermine",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "20.04",
+                    "entry_value": "20.04 - Focal Fossa (LTS)",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "20.10",
+                    "entry_value": "20.10 - Groovy Gorilla",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "21.04",
+                    "entry_value": "21.04 - Hirsute Hippo",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "21.10",
+                    "entry_value": "21.10 - Impish Indri",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "22.04",
+                    "entry_value": "22.04 - Jammy Jellyfish (LTS)",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "22.10",
+                    "entry_value": "22.10 - Kinetic Kudu",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "23.04",
+                    "entry_value": "23.04 - Lunar Lobster",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "23.10",
+                    "entry_value": "23.10 - Mantic Minotaur",
+                    "format": "string",
+                    "allowed_roles": null
+                }
+            ],
+            "list_name": "ubuntu_versions",
+            "owner": "admin"
+        },
+        "centos_versions": {
+            "entries": [
+                {
+                    "entry_name": "3",
+                    "entry_value": "3",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "4",
+                    "entry_value": "4",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "5",
+                    "entry_value": "5",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "6",
+                    "entry_value": "6",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "7",
+                    "entry_value": "7",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "8",
+                    "entry_value": "8",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "stream8",
+                    "entry_value": "Stream 8",
+                    "format": "string",
+                    "allowed_roles": null
+                },
+                {
+                    "entry_name": "stream9",
+                    "entry_value": "Stream 9",
+                    "format": "string",
+                    "allowed_roles": null
+                }
+            ],
+            "list_name": "centos_versions",
+            "owner": "admin"
+        }
+    }
+}
