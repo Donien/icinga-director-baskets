@@ -5,14 +5,26 @@ import os
 import sys
 import csv
 import json
+import argparse
 
 
 
 # Globals
-DATALISTS_PATH  = './src/datalists/'
+## Meta
+__NAME__        = sys.argv[0]
+__VERSION__     = '0.1.0'
+__DESCRIPTION__ = '''
+This program is meant to create an Icinga Director Configuration Basket
+containing data lists. They are created from simple csv files.
+'''
+__EPILOG__      = '''
+'''
+
+## Program related
+DATALISTS_PATHS = ['./src/datalists/']
 DATALISTS_OWNER = 'admin'
 DATALISTS_ROLES = None
-DELIMETER       = ';'
+DELIMITER       = ';'
 QUOTECHAR       = '"'
 
 
@@ -22,10 +34,14 @@ def get_files(path):
 
     file_paths = list()
 
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            abs_path = os.path.abspath(os.path.join(root,file))
-            file_paths.append(abs_path)
+    if os.path.isfile(path):
+        file_paths.append(path)
+
+    elif os.path.isdir(path):
+        for root, dirs, files in os.walk(path):
+            for file in files:
+                abs_path = os.path.abspath(os.path.join(root,file))
+                file_paths.append(abs_path)
 
     return file_paths
 
@@ -42,7 +58,7 @@ def get_duplicates(file_paths):
     for basename in mapping.values():
         if list(mapping.values()).count(basename) > 1:
             found_basenames.append(basename)
-    
+
     for basename in found_basenames:
         basename_list = list()
         for key, value in mapping.items():
@@ -60,7 +76,7 @@ def build_datalist(file):
 
     entries = []
     with open(file, 'r') as csv_file:
-        rows = csv.reader(csv_file, delimiter=DELIMETER, quotechar=QUOTECHAR)
+        rows = csv.reader(csv_file, delimiter=DELIMITER, quotechar=QUOTECHAR)
         for key, value in rows:
             key   = key.strip()
             value = value.strip()
@@ -78,7 +94,7 @@ def build_datalist(file):
                        'owner': DATALISTS_OWNER,
                      }
                    }
-    
+
     return datalist_obj
 
 
@@ -98,13 +114,101 @@ def merge_datalists(datalists):
 
 
 def to_json(obj):
+    # Print dictionary object as json string
+
     json_string = json.dumps(obj)
     return json_string
 
 
 
+def parse_cmdline():
+    # Parse given command line arguments
+
+    global DATALISTS_PATHS
+    global DATALISTS_OWNER
+    global DATALISTS_ROLES
+    global DELIMITER
+    global QUOTECHAR
+
+    parser = argparse.ArgumentParser(
+                                     prog=__NAME__,
+                                     description=__DESCRIPTION__,
+                                     epilog=__EPILOG__,
+                                     add_help=False
+                                    )
+
+    parser.add_argument(
+                        '-h',
+                        '--help',
+                        action='help',
+                        default=argparse.SUPPRESS,
+                        help='Shows this help message')
+
+    parser.add_argument(
+                        '-t',
+                        '--target',
+                        action='append',
+                        dest='target',
+                        default=None,
+                        help='The path to either a directory or a specific file to source (can be specified multiple times)'
+                       )
+
+    parser.add_argument(
+                        '-d',
+                        '--delimiter',
+                        action='store',
+                        dest='delimiter',
+                        default=DELIMITER,
+                        help=f'The delimiter that should be used for the csv files (default: \'{DELIMITER}\')'
+                       )
+
+    parser.add_argument(
+                        '-e',
+                        '--enclosure',
+                        action='store',
+                        dest='quotechar',
+                        default=QUOTECHAR,
+                        help=f'The enclosure character that should be used for the csv files (default: \'{QUOTECHAR}\')'
+                       )
+
+    parser.add_argument(
+                        '-o',
+                        '--owner',
+                        action='store',
+                        dest='owner',
+                        default=DATALISTS_OWNER,
+                        help='The owner of the data lists'
+                       )
+
+    parser.add_argument(
+                        '-r',
+                        '--roles',
+                        action='append',
+                        dest='roles',
+                        default=None,
+                        help='The Icinga Web 2 roles the data lists should be available to'
+                       )
+
+    args = parser.parse_args()
+
+    if args.target:
+        DATALISTS_PATHS = list(set(args.target))
+
+    if args.roles:
+        DATALISTS_ROLES = list(set(args.roles))
+
+    DATALISTS_OWNER = args.owner
+    DELIMITER       = args.delimiter
+    QUOTECHAR       = args.quotechar
+
+
+
 def main():
-    file_list = get_files(DATALISTS_PATH)
+    parse_cmdline()
+    file_list = list()
+
+    for path in DATALISTS_PATHS:
+        file_list += get_files(path)
 
     if duplicates := get_duplicates(file_list):
         # WIP: write better error message
